@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ingreso-egreso-app-15d4c": {
+      "hosting": {
+        "ingreso-egreso-app": [
+          "ingreso-egreso-app-15d4c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ingreso-egreso-app-15d4c"
+  }
+}

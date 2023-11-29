@@ -14,6 +14,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { AppRoutingModule } from './app.routing.module';
 
+// import { AngularFireModule } from '@angular/fire';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +33,7 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    // AngularFireModule
   ],
   providers: [],
   bootstrap: [AppComponent]
