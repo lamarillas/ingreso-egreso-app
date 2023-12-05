@@ -13,8 +13,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { AppRoutingModule } from './app.routing.module';
-
-// import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment.development';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { AppRoutingModule } from './app.routing.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    // AngularFireModule
+    provideFirebaseApp(() => initializeApp(environment.firebaseConfig)),
+    provideAuth( () => getAuth() ),
+    provideFirestore( () => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]
